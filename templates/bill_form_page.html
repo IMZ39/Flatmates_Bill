@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Form Page</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+<h2>Bill Form</h2>
+<p>Fill in the form and click the button to get results</p>
+<form action="/bill" method="post">
+    {{bill_data.amount.label}} {{bill_data.amount}}
+    <br>
+    {{bill_data.period.label}} {{bill_data.period}}
+    <hr>
+    <p>First Flatmate</p>
+    {{bill_data.name1.label}} {{bill_data.name1}}
+    <br>
+    {{bill_data.days_in_house1.label}} {{bill_data.days_in_house1}}
+    <br>
+    <hr>
+    <p>Second Flatmate</p>
+    {{bill_data.name2.label}} {{bill_data.name2}}
+    <br>
+    {{bill_data.days_in_house2.label}} {{bill_data.days_in_house2}}
+    <br>
+    {{bill_data.button.label}}{{bill_data.button}}
+    <br>
+    {% if result %}
+    {{name1}} pays {{amount1}}
+    <br>
+    {{name2}} pays {{amount2}}
+    {% endif %}
+
+</form>
+</body>
+</html>
