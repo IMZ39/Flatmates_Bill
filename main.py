@@ -9,7 +9,7 @@ app = Flask(__name__)
 class HomePage(MethodView):
 
     def get(self):
-        return render_template('index.html')
+        return render_template('templates/index.html')
 
 
 class BillFormPage(MethodView):
